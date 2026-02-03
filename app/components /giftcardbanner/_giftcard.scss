@@ -1,0 +1,481 @@
+// @import '../../styles/variables';
+// @import '../../styles/mixins';
+
+// .gift-card-banner {
+//   display: flex;
+//   width: 100%;
+//   min-height: 600px;
+
+//   @include tablet {
+//     flex-direction: column;
+//     min-height: auto;
+//   }
+
+//   @include mobile {
+//     flex-direction: column;
+//   }
+// }
+
+// // Left Side - Text Content (50%)
+// .gift-card-banner__content {
+//   flex: 1;
+//   min-width: 50%;
+//   background: linear-gradient(135deg, #e8f4f8 0%, #d4e8ee 100%);
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   padding: 80px 48px;
+
+//   @include tablet {
+//     padding: 60px 40px;
+//     min-width: 100%;
+//   }
+
+//   @include mobile {
+//     padding: 48px 24px;
+//     min-width: 100%;
+//   }
+// }
+
+// .gift-card-banner__subtitle {
+//   font-size: 0.7rem;
+//   font-weight: 600;
+//   letter-spacing: 0.3em;
+//   color: #333;
+//   margin-bottom: 16px;
+//   text-transform: uppercase;
+//   opacity: 0.8;
+
+//   @include mobile {
+//     font-size: 0.65rem;
+//     letter-spacing: 0.25em;
+//   }
+// }
+
+// .gift-card-banner__title {
+//   font-size: 3.5rem;
+//   font-weight: 700;
+//   letter-spacing: 0.15em;
+//   color: #1a1a1a;
+//   margin-bottom: 24px;
+//   line-height: 1.1;
+
+//   @include tablet {
+//     font-size: 3rem;
+//   }
+
+//   @include mobile {
+//     font-size: 2.2rem;
+//     letter-spacing: 0.1em;
+//   }
+// }
+
+// .gift-card-banner__description {
+//   font-size: 1.05rem;
+//   color: #444;
+//   line-height: 1.7;
+//   margin-bottom: 40px;
+//   max-width: 480px;
+
+//   @include tablet {
+//     font-size: 1rem;
+//     max-width: 420px;
+//   }
+
+//   @include mobile {
+//     font-size: 0.95rem;
+//     max-width: 100%;
+//     margin-bottom: 32px;
+//   }
+// }
+
+// .gift-card-banner__button {
+//   background-color: #000;
+//   color: #fff;
+//   font-size: 0.75rem;
+//   font-weight: 600;
+//   letter-spacing: 0.2em;
+//   padding: 14px 40px;
+//   text-transform: uppercase;
+//   text-decoration: underline;
+//   text-underline-offset: 4px;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+//   border: none;
+//   display: inline-block;
+
+//   @include mobile {
+//     padding: 12px 32px;
+//     font-size: 0.7rem;
+//   }
+
+//   &:hover {
+//     background-color: #333;
+//     transform: translateY(-2px);
+//   }
+
+//   &:active {
+//     transform: translateY(0);
+//   }
+// }
+
+// // Right Side - Visual Content (50%)
+// .gift-card-banner__visual {
+//   flex: 1;
+//   min-width: 50%;
+//   position: relative;
+//   background: linear-gradient(135deg, #f0e6f6 0%, #e6d9f0 100%);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   overflow: hidden;
+
+//   @include tablet {
+//     min-height: 500px;
+//     min-width: 100%;
+//   }
+
+//   @include mobile {
+//     min-height: 400px;
+//     min-width: 100%;
+//   }
+// }
+
+// // Decorative flower overlays
+// .gift-card-banner__flower {
+//   position: absolute;
+//   background-size: cover;
+//   background-position: center;
+//   opacity: 0.85;
+
+//   &--top-right {
+//     top: 0;
+//     right: 0;
+//     width: 35%;
+//     height: 40%;
+
+//     @include mobile {
+//       width: 40%;
+//       height: 35%;
+//     }
+//   }
+
+//   &--bottom-left {
+//     bottom: 0;
+//     left: 0;
+//     width: 35%;
+//     height: 40%;
+
+//     @include mobile {
+//       width: 40%;
+//       height: 35%;
+//     }
+//   }
+// }
+
+// // Center brand card
+// .gift-card-banner__card {
+//   position: relative;
+//   background: rgba(255, 255, 255, 0.95);
+//   backdrop-filter: blur(10px);
+//   border-radius: 24px;
+//   padding: 64px 80px;
+//   text-align: center;
+//   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+//   z-index: 2;
+//   border: 1px solid rgba(255, 255, 255, 0.5);
+
+//   @include tablet {
+//     padding: 56px 64px;
+//   }
+
+//   @include mobile {
+//     padding: 48px 40px;
+//     border-radius: 20px;
+//   }
+// }
+
+// .gift-card-banner__brand {
+//   font-size: 4rem;
+//   font-weight: 700;
+//   letter-spacing: 0.5em;
+//   color: #e63946;
+//   line-height: 1;
+//   margin-bottom: 8px;
+//   text-transform: uppercase;
+
+//   @include tablet {
+//     font-size: 3.5rem;
+//     letter-spacing: 0.4em;
+//   }
+
+//   @include mobile {
+//     font-size: 2.5rem;
+//     letter-spacing: 0.3em;
+//   }
+// }
+
+// .gift-card-banner__location {
+//   font-size: 1.4rem;
+//   font-weight: 500;
+//   letter-spacing: 0.6em;
+//   color: #e63946;
+//   text-transform: uppercase;
+
+//   @include tablet {
+//     font-size: 1.2rem;
+//     letter-spacing: 0.5em;
+//   }
+
+//   @include mobile {
+//     font-size: 1rem;
+//     letter-spacing: 0.4em;
+//   }
+// }
+
+
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.gift-card-banner {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+
+  @include tablet {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+// Left Side - Text Content (50%)
+.gift-card-banner__content {
+  flex: 1;
+  min-width: 50%;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d4e8ee 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 48px;
+
+  @include tablet {
+    padding: 60px 40px;
+    min-width: 100%;
+  }
+
+  @include mobile {
+    padding: 48px 24px;
+    min-width: 100%;
+  }
+}
+
+.gift-card-banner__subtitle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: #333;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  opacity: 0.8;
+
+  @include mobile {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+  }
+}
+
+.gift-card-banner__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  line-height: 1.1;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+
+  @include mobile {
+    font-size: 2.2rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+.gift-card-banner__description {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 480px;
+
+  @include tablet {
+    font-size: 1rem;
+    max-width: 420px;
+  }
+
+  @include mobile {
+    font-size: 0.95rem;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+.gift-card-banner__button {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  padding: 14px 40px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-block;
+
+  @include mobile {
+    padding: 12px 32px;
+    font-size: 0.7rem;
+  }
+
+  &:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Right Side - Visual Content (50%)
+.gift-card-banner__visual {
+  flex: 1;
+  min-width: 50%;
+  position: relative;
+  background: linear-gradient(135deg, #f0e6f6 0%, #e6d9f0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @include tablet {
+    min-height: 500px;
+    min-width: 100%;
+  }
+
+  @include mobile {
+    min-height: 400px;
+    min-width: 100%;
+  }
+}
+
+// Decorative flower overlays - Using CSS gradients as placeholders
+.gift-card-banner__flower {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(255, 182, 193, 0.6), rgba(221, 160, 221, 0.4));
+  opacity: 0.7;
+
+  &--top-right {
+    top: -10%;
+    right: -10%;
+    width: 45%;
+    height: 50%;
+    border-radius: 50%;
+    filter: blur(30px);
+
+    @include mobile {
+      width: 50%;
+      height: 40%;
+      top: -5%;
+      right: -5%;
+    }
+  }
+
+  &--bottom-left {
+    bottom: -10%;
+    left: -10%;
+    width: 45%;
+    height: 50%;
+    border-radius: 50%;
+    filter: blur(30px);
+
+    @include mobile {
+      width: 50%;
+      height: 40%;
+      bottom: -5%;
+      left: -5%;
+    }
+  }
+}
+
+// Center brand card
+.gift-card-banner__card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 64px 80px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  @include tablet {
+    padding: 56px 64px;
+  }
+
+  @include mobile {
+    padding: 48px 40px;
+    border-radius: 20px;
+  }
+}
+
+.gift-card-banner__brand {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  color: #e63946;
+  line-height: 1;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 3.5rem;
+    letter-spacing: 0.4em;
+  }
+
+  @include mobile {
+    font-size: 2.5rem;
+    letter-spacing: 0.3em;
+  }
+}
+
+.gift-card-banner__location {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.6em;
+  color: #e63946;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+  }
+
+  @include mobile {
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+  }
+}

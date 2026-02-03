@@ -1,0 +1,142 @@
+// ========================================
+// GLOBAL STYLES
+// ========================================
+
+// Box sizing reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Root and body
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-base;
+  font-size: $font-base;
+  font-weight: $font-weight-normal;
+  line-height: 1.6;
+  color: $text-primary;
+  background-color: $bg-primary;
+  overflow-x: hidden;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+  margin-bottom: $space-4;
+  color: $text-primary;
+}
+
+h1 { font-size: $font-4xl; }
+h2 { font-size: $font-3xl; }
+h3 { font-size: $font-2xl; }
+h4 { font-size: $font-xl; }
+h5 { font-size: $font-lg; }
+h6 { font-size: $font-base; }
+
+p {
+  margin-bottom: $space-4;
+  color: $text-secondary;
+}
+
+// Links
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: darken($primary, 10%);
+  }
+  
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+}
+
+// Lists
+ul, ol {
+  list-style-position: inside;
+  margin-bottom: $space-4;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Buttons
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+// Inputs
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: $container-xl;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-4;
+  padding-right: $space-4;
+  
+  @include tablet {
+    padding-left: $space-6;
+    padding-right: $space-6;
+  }
+}
+
+// Utility classes
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Responsive utilities
+.hide-mobile {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hide-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.show-mobile {
+  display: none !important;
+  
+  @include tablet {
+    display: block !important;
+  }
+}

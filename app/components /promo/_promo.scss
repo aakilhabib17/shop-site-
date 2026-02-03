@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.hero-promo {
+//background-color: #a793ac;
+//background-color:  #04192678;
+//background-color: #f4d7df;
+  background-color: #33042178;  
+  text-align: center;
+  padding: 28px 16px;
+
+  @include mobile {
+    padding: 24px 12px;
+  }
+}
+
+.hero-promo__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: #282c3f;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+.hero-promo__subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #282c3f;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+
+  @include mobile {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+}
+
+.hero-promo__code {
+  font-weight: 700;
+}
+
+.hero-promo__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @include mobile {
+    gap: 16px;
+  }
+}
+
+.hero-promo__button {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #282c3f;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  text-transform: uppercase;
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include mobile {
+    font-size: 0.75rem;
+  }
+}

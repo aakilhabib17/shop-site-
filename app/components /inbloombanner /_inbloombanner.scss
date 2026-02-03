@@ -1,0 +1,135 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.in-bloom-banner {
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+
+  @include tablet {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+// Left Side - Image (50%)
+.in-bloom-banner__image {
+  flex: 1;
+  min-width: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    min-height: 400px;
+    min-width: 100%;
+  }
+
+  @include mobile {
+    min-height: 300px;
+    min-width: 100%;
+  }
+}
+
+// Right Side - Content (50%)
+.in-bloom-banner__content {
+  flex: 1;
+  min-width: 50%;
+  background-color: #f4d7df;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 64px 32px;
+
+  @include tablet {
+    padding: 48px 32px;
+    min-width: 100%;
+  }
+
+  @include mobile {
+    padding: 32px 24px;
+    min-width: 100%;
+  }
+}
+
+.in-bloom-banner__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: #000;
+  margin-bottom: 24px;
+
+  @include tablet {
+    font-size: 3rem;
+  }
+
+  @include mobile {
+    font-size: 2.5rem;
+    letter-spacing: 0.25em;
+  }
+}
+
+.in-bloom-banner__description {
+  font-size: 1.05rem;
+  color: #000;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 520px;
+
+  @include tablet {
+    font-size: 1rem;
+    max-width: 480px;
+  }
+
+  @include mobile {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}
+
+.in-bloom-banner__buttons {
+  display: flex;
+  gap: 20px;
+
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+.in-bloom-banner__button {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  padding: 10px 28px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+
+  @include mobile {
+    width: 100%;
+    padding: 12px 24px;
+  }
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

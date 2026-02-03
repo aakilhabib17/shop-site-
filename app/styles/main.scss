@@ -1,0 +1,13 @@
+// ========================================
+// MAIN ENTRY POINT
+// Import order matters!
+// ========================================
+
+// 1. Variables first (needed by everything)
+@import 'variables';
+
+// 2. Mixins second (can use variables)
+@import 'mixins';
+
+// 3. Global styles last (can use both)
+@import 'globals';

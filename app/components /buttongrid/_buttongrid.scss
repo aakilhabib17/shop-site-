@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 32px 16px;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  @include desktop {
+    gap: 12px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 24px 12px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px 12px;
+  }
+}
+
+.button-grid__item {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px 10px; // REDUCED - smaller box
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  transition: transform 0.3s ease; // Stretch effect instead of color
+  border: none;
+  cursor: pointer;
+
+  @include tablet {
+    padding: 14px 12px;
+    font-size: 0.8rem;
+  }
+
+  @include mobile {
+    padding: 14px 12px;
+    font-size: 0.75rem;
+  }
+
+  &:hover {
+    transform: scaleY(1.08); // Vertical stretch on hover
+  }
+
+  &:active {
+    transform: scaleY(1);
+  }
+}
