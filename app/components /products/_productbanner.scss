@@ -1,0 +1,108 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.new-arrivals {
+  position: relative;
+  padding: 48px 0;
+  background-color: #fff;
+
+  @include mobile {
+    padding: 32px 0;
+  }
+}
+
+.new-arrivals__header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 0 16px;
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
+}
+
+.new-arrivals__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #000;
+  margin-bottom: 8px;
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+.new-arrivals__subtitle {
+  font-size: 1rem;
+  color: #666;
+
+  @include mobile {
+    font-size: 0.9rem;
+  }
+}
+
+// Carousel wrapper
+.new-arrivals__carousel {
+  position: relative;
+  overflow: visible;
+  padding: 0 16px 20px 16px;
+
+  @include mobile {
+    padding: 0 12px 20px 12px;
+  }
+}
+
+.new-arrivals__wrapper {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+  
+  // Show scrollbar at bottom for dragging
+  scrollbar-width: thin;
+  scrollbar-color: #999 #f0f0f0;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+    
+    &:hover {
+      background: #666;
+    }
+  }
+
+  @include mobile {
+    gap: 12px;
+  }
+}
+
+.new-arrivals__item {
+  flex: 0 0 280px;
+  min-width: 280px;
+
+  @include tablet {
+    flex: 0 0 240px;
+    min-width: 240px;
+  }
+
+  @include mobile {
+    flex: 0 0 200px;
+    min-width: 200px;
+  }
+}
