@@ -1,361 +1,326 @@
-// @import '../../../styles/variables';
-// @import '../../../styles/mixins';
-
-// .header-main {
-//   background-color: #ffffff;
-//   padding: 16px 24px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   max-width: 1600px;
-//   margin: 0 auto;
-
-//   @include tablet {
-//     padding: 12px 16px;
-//   }
-// }
-
-// // Search Section
-// .header-search {
-//   flex: 1;
-//   max-width: 400px;
-
-//   @include tablet {
-//     display: none;
-//   }
-// }
-
-// .header-search-form {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-// }
-
-// .header-search-input {
-//   width: 100%;
-//   padding: 10px 40px 10px 16px;
-//   border: 1px solid #e5e5e5;
-//   border-radius: 0;
-//   font-size: 0.875rem;
-//   color: #333;
-//   font-family: inherit;
-//   transition: border-color $transition-fast;
-
-//   &::placeholder {
-//     color: #999;
-//   }
-
-//   &:focus {
-//     outline: none;
-//     border-color: #333;
-//   }
-// }
-
-// .header-search-button {
-//   position: absolute;
-//   right: 12px;
-//   background: none;
-//   border: none;
-//   padding: 4px;
-//   cursor: pointer;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   svg {
-//     font-size: 20px;
-//     color: #666;
-//   }
-// }
-
-// // Logo Section
-// .header-logo {
-//   flex: 0 0 auto;
-//   text-decoration: none;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 0 32px;
-
-//   @include tablet {
-//     margin: 0 16px;
-//   }
-// }
-
-// .header-logo-main {
-//   font-size: 1.5rem;
-//   font-weight: 400;
-//   letter-spacing: 0.3em;
-//   color: #000;
-//   line-height: 1;
-//   margin: 0;
-//   font-family: 'Georgia', serif;
-
-//   @include tablet {
-//     font-size: 1.2rem;
-//   }
-// }
-
-// .header-logo-sub {
-//   font-size: 0.65rem;
-//   font-weight: 400;
-//   letter-spacing: 0.25em;
-//   color: #666;
-//   margin: 4px 0 0 0;
-
-//   @include tablet {
-//     font-size: 0.6rem;
-//   }
-// }
-
-// // Actions Section
-// .header-actions {
-//   flex: 1;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: center;
-//   gap: 16px;
-
-//   @include tablet {
-//     gap: 12px;
-//   }
-// }
-
-// .header-icon-btn {
-//   background: none;
-//   border: none;
-//   padding: 8px;
-//   cursor: pointer;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   color: #000;
-//   transition: color $transition-fast;
-//   position: relative;
-
-//   &:hover {
-//     color: #666;
-//   }
-
-//   svg {
-//     font-size: 24px;
-
-//     @include tablet {
-//       font-size: 22px;
-//     }
-//   }
-// }
-
-// .header-bag-badge {
-//   position: absolute;
-//   top: 2px;
-//   right: 2px;
-//   background-color: #000;
-//   color: #fff;
-//   font-size: 10px;
-//   font-weight: 600;
-//   min-width: 18px;
-//   height: 18px;
-//   border-radius: 50%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 0 4px;
-// }
-
-// .header-mobile-toggle {
-//   display: none;
-
-//   @include tablet {
-//     display: flex;
-//   }
-// }
-
-
-
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
-
 .header-main {
-  background-color: #ffffff;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1600px;
-  margin: 0 auto;
-  position: relative;
-
-  @include tablet {
-    padding: 12px 16px;
-  }
-}
-
-// Search Section - Left side
-.header-search {
-  flex: 1;
-  max-width: 400px;
-  min-width: 300px;
-
-  @include tablet {
-    display: none;
-  }
-}
-
-.header-search-form {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.header-search-input {
-  width: 100%;
-  padding: 10px 40px 10px 16px;
-  border: 1px solid #e5e5e5;
-  border-radius: 0;
-  font-size: 0.875rem;
-  color: #333;
-  font-family: inherit;
-  transition: border-color $transition-fast;
-
-  &::placeholder {
-    color: #999;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: #333;
-  }
-}
-
-.header-search-button {
-  position: absolute;
-  right: 12px;
-  background: none;
-  border: none;
-  padding: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  svg {
-    font-size: 20px;
-    color: #666;
-  }
-}
-
-// Logo Section - Centered with absolute positioning
-.header-logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @include tablet {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
-  }
-}
-
-.header-logo-main {
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  color: #000;
-  line-height: 1;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-
-  @include tablet {
-    font-size: 1.1rem;
-  }
-}
-
-.header-logo-sub {
-  font-size: 0.65rem;
-  font-weight: 400;
-  letter-spacing: 0.25em;
-  color: #666;
-  margin: 4px 0 0 0;
-
-  @include tablet {
-    font-size: 0.6rem;
-  }
-}
-
-// Actions Section - Right side
-.header-actions {
-  flex: 1;
-  max-width: 400px;
-  min-width: 300px;
-  display: flex;
-  justify-content: flex-end;
+  background: #fff;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left / logo / right */
   align-items: center;
   gap: 16px;
-
-  @include tablet {
-    gap: 12px;
-    min-width: auto;
-    flex: 0;
-  }
+  position: relative;
+  min-height: 70px;
 }
 
-.header-icon-btn {
+
+.mobile-menu-btn {
+  display: none; /* desktop: hidden */
   background: none;
   border: none;
   padding: 8px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #000;
-  transition: color $transition-fast;
-  position: relative;
-
-  &:hover {
-    color: #666;
-  }
+  line-height: 0;
 
   svg {
     font-size: 24px;
+  }
+}
 
-    @include tablet {
-      font-size: 22px;
+/* =========================
+   LEFT: DESKTOP SEARCH
+   ========================= */
+
+.desktop-search {
+  display: block;
+
+  form {
+    position: relative;
+    max-width: 420px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    border: 1px solid #e5e5e5;
+    font-size: 0.875rem;
+    background: #fff;
+    color: #000;
+
+    &:focus {
+      outline: none;
+      border-color: #333;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    line-height: 0;
+
+    svg {
+      font-size: 20px;
+      color: #666;
     }
   }
 }
 
-.header-bag-badge {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  background-color: #000;
-  color: #fff;
-  font-size: 10px;
-  font-weight: 600;
-  min-width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 4px;
-}
+/* =========================
+   CENTER: LOGO
+   ========================= */
 
-.header-mobile-toggle {
-  display: none;
+.logo {
+  text-decoration: none;
+  text-align: center;
+  justify-self: center;
 
-  @include tablet {
-    display: flex;
+  .logo-main {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: #000;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .logo-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: #666;
+    margin-top: 4px;
+    white-space: nowrap;
   }
 }
 
+/* =========================
+   RIGHT: ICONS
+   ========================= */
+
+.header-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  justify-self: end;
+
+  button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #000;
+    position: relative;
+    line-height: 0;
+
+    svg {
+      font-size: 24px;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    line-height: 1;
+  }
+}
+
+/* =========================
+   MOBILE: PERFECT CENTERING
+   (logo absolute center,
+   menu left, icons right)
+   ========================= */
+
+@media (max-width: 768px) {
+  .header-main {
+    /* grid not needed on mobile; absolute positioning is more reliable */
+    display: block;
+    padding: 12px;
+    min-height: 60px;
+  }
+
+  /* hide desktop search on mobile */
+  .desktop-search {
+    display: none;
+  }
+
+  /* show menu button on mobile */
+  .mobile-menu-btn {
+    display: flex !important;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  /* center logo regardless of text length */
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+
+    /* prevents long titles overlapping icons */
+    width: max-content;
+    max-width: 58%;
+    overflow: hidden;
+  }
+
+  .logo .logo-main {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .logo .logo-sub {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* icons pinned to right */
+  .header-icons {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    gap: 4px;
+  }
+
+  .header-icons button {
+    padding: 6px;
+  }
+
+  .header-icons button svg {
+    font-size: 20px;
+  }
+}
+
+/* =========================
+   MOBILE DRAWER
+   ========================= */
+
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.mobile-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  max-width: 350px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e5e5e5;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 0.08em;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    line-height: 0;
+  }
+}
+
+.mobile-nav {
+  flex: 1;
+  overflow-y: auto;
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #f5f5f5;
+
+    &.sale {
+      color: #d32f2f;
+    }
+
+    span:last-child {
+      font-size: 1.5rem;
+      color: #666;
+      line-height: 1;
+    }
+  }
+}
+
+.mobile-footer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  border-top: 1px solid #e5e5e5;
+
+  button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    line-height: 0;
+  }
+}
+
+/* drawer should never appear on desktop */
+@media (min-width: 769px) {
+  .mobile-drawer {
+    display: none !important;
+  }
+}
